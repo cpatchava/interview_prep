@@ -9,6 +9,7 @@ def main():
 	root.insertNode(30, root)
 #	root.printTree()
 	print(root.right.countNodes())	
+
 class TreeNode:
 	def __init__(self, val=None, left=None, right=None):
 		self.val = val
@@ -55,4 +56,5 @@ class TreeNode:
 			self.right.printTree()
 
 if __name__ == '__main__':
-	main()
+#	main()
+	print ("hello")
