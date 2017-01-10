@@ -1,33 +1,21 @@
-"""def findPossibleSum(coin_arr, total):
-	size = total
-	my_list = [None]*total
-	for x in range(0, total):
-		
-def findCombos(x, coin_arr, curr_list):
-	if x == 0:
-		return 0
+
+saved = {}
+
+def findSum(coins, total):
+	for x in range (coins[0], total):
+		my_helper(coins, x)
+	print saved
+
+def my_helper(coins, curr_total):
+	if curr_total in saved:
+		return str(saved[curr_total])
+	elif curr_total < coins[0]:
+		return
 	else:
-		
-"""
-
-
-
-
-
-
-def findSum(coin_arr, total):
-	dynamicArr = {}
-	for x in range(0, total):
-		dynamicArr[x] = []
-		my_helper(total, coin_arr, x )
-			
-
-def my_helper(total, coin_arr, start):
-	for x in range (start, len(coin_arr)):
-		if total - coin_arr[x] > 0:
-			print my_helper(total - coin_arr[x], coin_arr, start)
-		elif total - coin_arr[x] is 0:
-			return coin_arr[x]
-		else:
-			print ""	
+		for x in range(0, len(coins)):
+			lists = []
+			my_str = str(coins[x]) + " " + str(findSum(coins, curr_total - coins[x]))
+			lists.append(my_str)
+			saved[curr_total] = lists
+			return my_str
 findSum([1,2,3], 5)
