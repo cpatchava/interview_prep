@@ -6,7 +6,7 @@ def main():
 	root.insertNode(13, root)
 	root.insertNode(1, root)
 	root.insertNode(5, root)
-	root.insertNode(30, root)
+#	root.insertNode(30, root)
 #	root.printTree()
 	print(root.right.countNodes())	
 
@@ -31,7 +31,7 @@ class TreeNode:
 				self.left = TreeNode(val, root)
 			else:
 				self.left.insertNode(val, root)
-		self.balanceTree(root)
+		#self.balanceTree(root)
 		
 	def balanceTree(self, root):
 		left_size=0
@@ -57,5 +57,5 @@ class TreeNode:
 			self.right.printTree()
 
 if __name__ == '__main__':
-#	main()
+	main()
 	print ("hello")
